@@ -25,22 +25,22 @@ function calculate() {
                 alert('Введите корректные значения для веса и роста.');
             } else {
                 const bmi = weightInput / Math.pow(heightInput, 2);
-                const roundedBmi = bmi.toFixed(1);
+                const roundedbmi = Math.round(bmi * 10) / 10;
 
                 let bmiCategory;
 
-                if (bmi < 18.5) {
+                if (roundedbmi < 18.5) {
                     bmiCategory = 'Недостаточный вес';
-                } else if (bmi >= 18.5 && bmi < 24.9) {
+                } else if (roundedbmi >= 18.5 && roundedbmi < 24.9) {
                     bmiCategory = 'Нормальный вес';
-                } else if (bmi >= 25 && bmi < 29.9) {
+                } else if (roundedbmi >= 25 && roundedbmi <= 29.9) {
                      bmiCategory = 'Избыточный вес';
-                    } else if (bmi >= 30 && bmi < 100) {
+                    } else if (roundedbmi >= 30 && roundedbmi <= 100) {
                         bmiCategory = 'Ожирение';
                     } else {
                         bmiCategory = '🤨Да ну?';
                     }
-                    resultElement.innerHTML = `Индекс массы тела (ИМТ): ${roundedBmi} - ${bmiCategory}`;
+                    resultElement.innerHTML = `Индекс массы тела (ИМТ): ${roundedbmi} - ${bmiCategory}`;
                 }
                 break;
         case '2':
