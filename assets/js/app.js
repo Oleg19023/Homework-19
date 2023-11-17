@@ -29,9 +29,9 @@ function calculate() {
 
                 if (bmi < 18.5) {
                     bmiCategory = 'Недостаточный вес';
-                } else if (bmi >= 18.5 && bmi < 24.9) {
+                } else if (bmi >= 18.59 && bmi < 24.99) {
                     bmiCategory = 'Нормальный вес';
-                } else if (bmi >= 25 && bmi < 29.9) {
+                } else if (bmi >= 25 && bmi < 29.99) {
                      bmiCategory = 'Избыточный вес';
                     } else if (bmi >= 30 && bmi < 100) {
                         bmiCategory = 'Ожирение';
