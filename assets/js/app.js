@@ -29,17 +29,23 @@ function calculate() {
 
                 let bmiCategory;
 
-                if (roundedbmi < 18.5) {
-                    bmiCategory = 'Недостаточный вес';
-                } else if (roundedbmi >= 18.5 && roundedbmi < 24.9) {
-                    bmiCategory = 'Нормальный вес';
-                } else if (roundedbmi >= 25 && roundedbmi <= 29.9) {
-                     bmiCategory = 'Избыточный вес';
-                    } else if (roundedbmi >= 30 && roundedbmi <= 100) {
-                        bmiCategory = 'Ожирение';
-                    } else {
-                        bmiCategory = '🤨Да ну?';
-                    }
+                if (roundedbmi < 16) {
+                    bmiCategory = 'Выраженный дефицит массы тела';
+                } else if (roundedbmi >= 16 && roundedbmi < 17) {
+                    bmiCategory = 'Дефицит массы тела';
+                } else if (roundedbmi >= 17 && roundedbmi < 18.5) {
+                    bmiCategory = 'Недостаточная масса тела';
+                } else if (roundedbmi >= 18.5 && roundedbmi < 25) {
+                    bmiCategory = 'Нормальная масса тела';
+                } else if (roundedbmi >= 25 && roundedbmi < 30) {
+                    bmiCategory = 'Избыточная масса тела (предожирение)';
+                } else if (roundedbmi >= 30 && roundedbmi < 35) {
+                    bmiCategory = 'Ожирение I степени';
+                } else if (roundedbmi >= 35 && roundedbmi < 40) {
+                    bmiCategory = 'Ожирение II степени';
+                } else {
+                    bmiCategory = 'Ожирение III степени';
+                }
                     resultElement.innerHTML = `Индекс массы тела (ИМТ): ${roundedbmi} - ${bmiCategory}`;
                 }
                 break;
