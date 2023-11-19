@@ -31,10 +31,8 @@ function calculate() {
 
                 if (roundedbmi < 16) {
                     bmiCategory = 'Выраженный дефицит массы тела';
-                } else if (roundedbmi >= 16 && roundedbmi < 17) {
+                } else if (roundedbmi >= 16 && roundedbmi < 18.5) {
                     bmiCategory = 'Дефицит массы тела';
-                } else if (roundedbmi >= 17 && roundedbmi < 18.5) {
-                    bmiCategory = 'Недостаточная масса тела';
                 } else if (roundedbmi >= 18.5 && roundedbmi < 25) {
                     bmiCategory = 'Нормальная масса тела';
                 } else if (roundedbmi >= 25 && roundedbmi < 30) {
